@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>carrito</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <!-- List Header with Button -->
+    <ion-list-header>
+      <ion-label>Repartidores</ion-label>
+      <ion-button>See All</ion-button>
+    </ion-list-header>
+
+    <div *ngFor="let p of productos">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src={{p.image}}>
+        </ion-avatar>
+        <ion-label>
+          <h2>{{p.nombre}}</h2>
+          <h3>{{p.precio}}</h3>
+          <!--<p>{{p.deta}}</p>-->
+        </ion-label>
+      </ion-item>
+    </div>
+      
+    
+  </ion-list>
+</ion-content>

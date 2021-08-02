@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item>
+      <ion-button class="btn-signup" strong ="true" shape="round" (click)="back()">Atras</ion-button>
+    </ion-item>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h3>Ingrese sus datos</h3>
+<!--
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text"  [(ngModel)]="user.displayName"></ion-input>
+  </ion-item>
+ 
+
+  <ion-item>
+    <ion-label position="floating">Apellido</ion-label>
+    <ion-input type="text" [(ngModel)]="user.lastname"></ion-input>
+  </ion-item>
+  -->
+
+  <ion-item>
+    <ion-label position="floating">Correo</ion-label>
+    <ion-input type="email" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  
+
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+  
+<!--
+  <ion-item>
+    <ion-label position="floating">Celular</ion-label>
+    <ion-input type="number"  [(ngModel)]="user.numberPhone"></ion-input>
+  </ion-item>
+  
+
+  <ion-item>
+    <ion-label position="floating">Direccion</ion-label>
+    <ion-input type="text"  [(ngModel)]="user.address"></ion-input>
+  </ion-item>
+  
+-->
+
+
+
+<!--
+<app-take-photo source="gallery" (imageSelected)="imageSeleccionada($event)"
+  (uploadFinished)="uploadFinished($event)"></app-take-photo>
+<app-take-photo source="photo" (imageSelected)="imageSeleccionada($event)" (uploadFinished)="uploadFinished($event)">
+</app-take-photo>
+-->
+<div class="btn-content">
+  <div class="content-2">
+    <ion-item>
+      <ion-button class="btn-signup" strong ="true" shape="round" (click)="guardar()">Registrar</ion-button>
+    </ion-item>
+  </div>  
+</div>
+</ion-content>

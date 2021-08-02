@@ -1,0 +1,31 @@
+<ion-header>
+  
+  <ion-toolbar>
+    <ion-title>inicio</ion-title>
+  </ion-toolbar>
+  <ion-item>
+    <ion-button class="btn-ion" strong="true" shape="round" (click)="call()">Llamar</ion-button>
+  </ion-item>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-button class="btn-ion" strong="true" shape="round" (click)="navega()">Carrito</ion-button>
+  </ion-item>
+
+
+  <div *ngFor="let p of productos | async">
+    <ion-card (click)= ir(p)>
+      <img src= {{p.image}} />
+      <ion-card-header>
+        <ion-card-title>{{p.nombre}}</ion-card-title>
+        <ion-card-subtitle>{{p.precio}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>{{p.detalle}}</ion-card-content>
+    </ion-card>
+    <div class="content-1">
+      <ion-button class="btn-ion" strong="true" shape="round" (click)="agregar(p)">Agregar al carrito</ion-button>
+    </div>
+  </div>
+  
+</ion-content>
