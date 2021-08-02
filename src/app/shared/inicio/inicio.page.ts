@@ -24,6 +24,7 @@ export class InicioPage implements OnInit {
   */
   productos: any;
 
+  public carritos:Array<any>=[];
  
   
   constructor(
@@ -82,9 +83,17 @@ export class InicioPage implements OnInit {
 
 
   agregar(producto:any){
+    
+   
+
+    this.carritos.push(producto);
+    for (let p = 0; p< this.carritos.length; p++) {
+      localStorage.setItem('listaProductos', JSON.stringify(this.carritos))
+      
+    }
     let params: NavigationExtras = {
       queryParams:{
-        producto: producto
+        productos: this.carritos
       }
     }
     this.router.navigate(["carrito"], params);
