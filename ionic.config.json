@@ -1,0 +1,7 @@
+{
+  "name": "ventasreal-orlando",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
